@@ -1,0 +1,17 @@
+{
+  "name": "AllMarket",
+  "displayName": "AllMarket",
+  "expo": {
+    "name": "AllMarket",
+    "slug": "AllMarket",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
