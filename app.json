@@ -1,9 +1,9 @@
 {
-  "name": "AllMarket",
-  "displayName": "AllMarket",
+  "name": "Confusion",
+  "displayName": "Confusion",
   "expo": {
-    "name": "AllMarket",
-    "slug": "AllMarket",
+    "name": "Confusion",
+    "slug": "Confusion",
     "version": "1.0.0",
     "platforms": [
       "ios",
