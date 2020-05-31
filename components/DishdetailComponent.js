@@ -30,6 +30,13 @@ const RenderDish = (props) => {
             return false;
     }
 
+    const recognizeComment = ({ moveX, moveY, dx, dy }) => {
+        if ( dx > -200 )
+            return true;
+        else
+            return false;
+    }
+
     handleViewRef = ref => this.view = ref;
 
     const panResponder = PanResponder.create({
@@ -40,7 +47,7 @@ const RenderDish = (props) => {
             this.view.rubberBand(1000).then(endState => console.log(endState.finished ? 'finished' : 'cancelled'));
         },
         onPanResponderEnd: (e, gestureState) => {
-            if (recognizeDrag(gestureState))
+            if (recognizeDrag(gestureState)) {
                 Alert.alert(
                     'Add Favorite',
                     'Are you sure you wish to add ' + dish.name + ' to favorite?',
@@ -50,8 +57,11 @@ const RenderDish = (props) => {
                     ],
                     { cancelable: false }
                 );
-
-            return true;
+            return true
+            } else if (recognizeComment(gestureState)) {
+                props.gestureRecognized()
+                return true
+            }
         }
     })
 
@@ -171,6 +181,7 @@ class DishDetail extends Component {
                     favorite={this.props.favorites.some(el => el === dishId)}
                     onPress={() => this.markFavorite(dishId)} 
                     onPressForm={() => this.toggleModal()}
+                    gestureRecognized={() => this.toggleModal()}
                     >
                 </RenderDish>
                 <RenderComments comments={this.props.comments.comments.filter((comment) => comment.dishId === dishId)} />
