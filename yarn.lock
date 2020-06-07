@@ -1281,6 +1281,11 @@
     wcwidth "^1.0.1"
     ws "^1.1.0"
 
+"@react-native-community/netinfo@^5.9.2":
+  version "5.9.2"
+  resolved "https://registry.yarnpkg.com/@react-native-community/netinfo/-/netinfo-5.9.2.tgz#0e9df9717f292cd54fa9de322205b6263a1cb8e2"
+  integrity sha512-YPN6Qi9Sf64GlE3muLi4u4p4LaFP/65PTS0xssiGEaBAwSmZoUhzihhW1AptNe66ZQK9PxXfKIJDiLnYveK1aw==
+
 "@types/babel__core@^7.1.0":
   version "7.1.7"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.7.tgz#1dacad8840364a57c98d0dd4855c6dd3752c6b89"
